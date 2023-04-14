@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta Data-->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+        <!--CSS Reset-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css"/>
+        
+        <!--External CSS-->
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+        <!--Title of the page--> 
+        <title> "Raja Realtors Sign up Form" </title>
+    </head>
+    <body>
+        <header>
+            <!--Logo Image is showing error in mac becoz I used svg initialy and I think its components aren't removed, though I tried-->
+            <!--Navigation Panel-->
+            <nav>
+                <ul class="menu">
+                    <li><img class="logo" src="images/logo.jpg" alt="Raja Realtors Logo"></li>
+                    <li class="item"> <a href="#"> Home </a></li>
+                    <li class="item"> <a href="#"> About </a></li>
+                    <li class="item"> <a href="#">Properties for Sale</a></li>
+                    <li class="item"> <a href="#"> Happy Homes <!--for reviews--></a></li>
+                    <li class="item"> <a href="#"> Contacts </a></li>
+                    <li class="item button"><a href="#">Login</a></li>
+                    <!--OR--> 
+                    <li class="item button secondary"><a href="#">Sign Up</a></li>
+                <ul>
+            </nav>
+        </header>
+        <!--Main Section -->
+        <main>
+            <!--Form (not get, only post & since action is omitted it is set to the current page)-->
+            <form class="container"method="post" action="">
+                <legend><h1>Sign here!</h1></legend>
+                <!--I want to keep the form in a single block so I kept everything in same fieldset-->
+                <fieldset class="contact-box">
+                    <figure>
+                        <!--used div becoz I wanted left and right sections for css -->
+                        <div class="left"></div><div class="right"></div>
+                    </figure>    
+                    <ul>
+                        <li><label> First Name <input type="text" class="field" name="First_name" placeholder="First Name"></label></li>
+                        <li><label> Last Name <input type="text" class="field" name="Last_name" placeholder="Last Name"></label></li>         
+                        <li><label> Email <input type="email" class="field" name="email_address" placeholder="email@address.com" required></label></li>
+                        <!--province selection-->         
+                        <li><label>Province<select id="Province" class="field" name="Province">
+                                    <option value="Select" selected="selected">Select One</option>
+                                    <option value="Alberta">Alberta</option>
+                                    <option value="British columbia">British Columbia</option>
+                                    <option value="Manitoba">Manitoba</option>
+                                    <option value="New Brunswick">New Brunswick</option>
+                                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                    <option value="Nova Scotia">Nova Scotia</option>
+                                    <option value="Ontario">Ontario</option>
+                                    <option value="Prince Edward Island">Prince Edward Island</option>
+                                    <option value="Quebec">Quebec</option>
+                                    <option value="Saskatchewan">Saskatchewan</option>
+                                </select>
+                            </label>
+                        </li>
+                        <!--password submit-->
+                        <li><label>Password<input type="Password" class="field" name="Password" placeholder="Your Password" required></label></li>
+                        <!--checkbox for subscribing the newsletter-->
+                        <li><label for="newsletter">Subscribe for the Newsletter<input type="checkbox" id="newsletter" class="field" name="newsletter"></label></li>
+                        <li><input class="submit_btn" type="Submit"></li>
+                    </ul> 
+                </fieldset>       
+            </form>
+        </main>
+        <footer><p>©Guneet Kaur</p></footer>
+    </body>
+</html>

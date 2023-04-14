@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="" class="logo">
+          <img src="./images/logo.jpg" alt="logo" />
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Sign Up</h2>
+      <form>
+        <fieldset>
+          <legend>Applicant Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend>Employment Information</legend>
+          <label for="employer">Current Employer:</label>
+          <input type="text" id="employer" name="employer" />
+          <br />
+          <label>Salary:</label>
+          <fieldset class="salary_field">
+            <fieldset>
+              <input type="radio" id="salary1" name="salary" value="< $20k" />
+              <label for="salary1">&lt; $20k</label>
+            </fieldset>
+
+            <fieldset>
+              <input
+                type="radio"
+                id="salary2"
+                name="salary"
+                value="$20k - $50k"
+              />
+              <label for="salary2">$20k - $50k</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="salary3" name="salary" value="$50k+" />
+              <label for="salary3">$50k+</label>
+            </fieldset>
+          </fieldset>
+        </fieldset>
+        <fieldset>
+          <legend>Interested In:</legend>
+
+          <fieldset class="interest_group">
+            <label for="studio">
+              <input type="checkbox" id="studio" name="interested" value="studio" />
+              <img height="80px" src="https://img.freepik.com/premium-photo/3d-render-child-bedroom-with-wall-blue-wardrobe-reading-table_735631-3.jpg?w=996" alt="Studio" class="image" />
+            </label>
+          
+            <label for="one-bedroom">
+              <input type="checkbox" id="one-bedroom" name="interested" value="one-bedroom" />
+              <img height="80px" src="https://img.freepik.com/free-vector/bedroom-interior-with-furniture-beige-theme_1308-51120.jpg?w=996&t=st=1681408597~exp=1681409197~hmac=ab2342f1dcd9273235911344d253722165731021ed44600333cb69c0eb4e2815" alt="One Bedroom" class="image" />
+            </label>
+          
+            <label for="two-bedroom">
+              <input type="checkbox" id="two-bedroom" name="interested" value="two-bedroom" />
+              <img height="80px" src="https://img.freepik.com/free-vector/kids-bedroom-scene-white-background_1308-51322.jpg?w=996&t=st=1681408626~exp=1681409226~hmac=1150c8cf29f980b595ea7f1256ddb4fc35c5fa0223fa40f9aa8ec8ccee08d655" alt="Two Bedroom" class="image" />
+            </label>
+          </fieldset>
+          
+
+          <br />
+        </fieldset>
+        <div class="btn_wrapper">
+            <button type="submit" class="submit_btn">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; My Website 2023</p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

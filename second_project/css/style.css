@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2 url(https://img.freepik.com/free-vector/background-crystal-geometric-colorful-abstract_343694-2894.jpg?w=1380&t=st=1681411961~exp=1681412561~hmac=22a6f65af42ab386940e7daa54b3967abef5a413cbc83027ed24ab72eaf3bd11) center/cover no-repeat;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+
+}
+nav ul{
+    padding: 0px;
+}
+nav ul a{
+    color: #fff;
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav ul a:hover{
+    text-decoration: underline;
+}
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  width: 600px;
+  margin: 0 20px;
+}
+@media (max-width: 600px){
+    form{
+        width: 100%;
+        max-width: 500px;
+    }
+}
+h2{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.form-group > * {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group > *:last-child {
+  margin-right: 0;
+}
+
+.salary_field{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.salary_field fieldset{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.salary_field fieldset label{
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+.interest_group{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+@media (max-width: 600px){
+    .interest_group{
+        flex-wrap: wrap;
+    }
+}
+.interest_group label{
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.interest_group label img{
+    margin-right: 20px;
+}
+
+.btn_wrapper{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.submit_btn{
+    background: #30B9EE;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}

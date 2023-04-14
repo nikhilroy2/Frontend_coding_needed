@@ -1,0 +1,501 @@
+// mobile breakpoints 650px
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+    color: #fff;
+}
+
+header#header {
+    background: #000;
+    color: #fff;
+    position: relative;
+
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav {
+        .btn_toggle {
+            background: transparent;
+            color: #fff;
+            border: none;
+            outline: none;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: none;
+
+            @media (max-width: 650px) {
+                display: block;
+
+                .icon_times {
+                    display: none;
+                }
+
+                &.btn_toggle_active {
+                    .icon_times {
+                        display: inline-block;
+                    }
+
+                    .icon_bars {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .nav_list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            @media (max-width: 650px) {
+                position: absolute;
+                right: 0px;
+                top: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: none;
+                margin: 0px;
+                padding: 0;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 100%;
+
+                &.active_nav {
+                    display: block;
+                }
+
+                .nav_action {
+                    display: block !important;
+                    text-align: center;
+                    transition: .3s;
+                    padding-top: 15px;
+
+                    &:hover {
+                        background: #000;
+                    }
+                }
+            }
+
+            .nav_action {
+                color: #fff;
+                padding: 8px 15px;
+                display: inline-block;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+
+    .hero-content {
+        max-width: 1200px;
+        margin: auto;
+        padding: 8px 12px;
+
+    }
+
+    /* Hero Section Styles */
+
+    .hero {
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?size=626&ext=jpg&ga=GA1.1.1714516945.1681408488");
+            background-size: cover;
+            background-position: center center;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            transition: .3s;
+        }
+
+        &:hover {
+            &::after {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    .hero-content {
+        text-align: center;
+        color: #fff;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .btn-primary:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+
+
+}
+
+#sidebar_section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+
+        @media (max-width: 650px) {
+            display: block;
+        }
+    }
+
+    .content_box {
+        padding: 3rem;
+        text-align: center;
+
+        @media (max-width: 650px) {
+            padding: 1rem;
+        }
+
+        p {
+            line-height: 30px;
+        }
+    }
+
+    .sidebar {
+        background-color: #333;
+        min-width: 200px;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        @media (max-width: 650px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .sidebar nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar nav li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar nav a {
+        color: rgba(255, 255, 255, 0.706);
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .sidebar nav a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+}
+
+
+.content_card_section {
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        // padding: 8px 12px;
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .block {
+            width: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #000;
+            box-sizing: border-box;
+            text-align: center;
+
+            p {
+                line-height: 25px;
+            }
+        }
+    }
+
+
+
+}
+
+.related_image_section {
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        // padding: 8px 12px;
+    }
+
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container {
+        width: calc(33% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-out;
+    }
+
+    .image-container:hover img {
+        transform: scale(1.2);
+    }
+}
+
+.related_post_section {
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        // padding: 8px 12px;
+
+        .related-post-tile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            background-color: #000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 650px) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .related-post-tile {
+                width: 45%;
+                display: block;
+                text-align: center;
+
+                &:nth-child(odd) {
+                    margin-right: 50px;
+                }
+
+                .img_wrapper {
+                    margin: auto;
+                    width: 100%;
+                    min-width: 100%;
+                }
+            }
+        }
+
+        .related-post-tile .img_wrapper {
+            min-width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 8px 0 0 8px;
+
+            img {
+                min-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.5);
+                }
+            }
+        }
+
+        .post-details {
+            padding: 16px;
+        }
+
+        .post-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .post-description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+
+
+// footer
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    .content_wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 8px 12px;
+
+    }
+
+
+    .contact-info {
+        margin-right: 24px;
+    }
+
+    .contact-info h4 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .contact-info p {
+        margin-bottom: 8px;
+    }
+
+    .contact-form {
+        flex: 1;
+        max-width: 500px;
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form h4 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .contact-form form label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .contact-form form textarea {
+        height: 200px;
+    }
+
+    .contact-form form button {
+        padding: 12px;
+        background-color: #fff;
+        color: #333;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .back-to-top {
+        display: block;
+        font-size: 18px;
+        margin-top: 24px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .back-to-top:hover {
+        text-decoration: underline;
+    }
+
+}
