@@ -76,7 +76,7 @@ header#header {
                 padding-top: 20px;
                 padding-bottom: 20px;
                 width: 100%;
-
+                z-index: 3;
                 &.active_nav {
                     display: block;
                 }

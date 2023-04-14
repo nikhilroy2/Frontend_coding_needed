@@ -5,8 +5,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f2f2 url(https://img.freepik.com/free-vector/background-crystal-geometric-colorful-abstract_343694-2894.jpg?w=1380&t=st=1681411961~exp=1681412561~hmac=22a6f65af42ab386940e7daa54b3967abef5a413cbc83027ed24ab72eaf3bd11) center/cover no-repeat;
+}
+.full_img_design{
+  position: fixed;
   min-height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 header {
